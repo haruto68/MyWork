@@ -41,19 +41,19 @@ void Player::Move()
 //ˆÊ’uÀ•Wæ“¾ˆ—
 Vector2D Player::GetLocation() const
 {
-
+	return location;
 }
 
 //“–‚½‚è”»’èæ“¾ˆ—
 Vector2D Player::GetBoxSize() const
 {
-
+	return box_size;
 }
 
 //‘Ì—Íæ“¾ˆ—
 float Player::GetHp() const
 {
-
+	return hp;
 }
 
 //‘Ì—ÍŒ¸­ˆ—

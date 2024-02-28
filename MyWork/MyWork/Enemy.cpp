@@ -41,19 +41,19 @@ void Enemy::Move()
 //ˆÊ’uÀ•Wæ“¾ˆ—
 Vector2D Enemy::GetLocation() const
 {
-
+	return location;
 }
 
 //“–‚½‚è”»’èæ“¾ˆ—
 Vector2D Enemy::GetBoxSize() const
 {
-
+	return box_size;
 }
 
 //‘Ì—Íæ“¾ˆ—
 float Enemy::GetHp() const
 {
-
+	return hp;
 }
 
 //‘Ì—ÍŒ¸­ˆ—

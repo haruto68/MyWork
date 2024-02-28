@@ -14,7 +14,7 @@ private:
 
 public:
 	Enemy();						//コンストラクタ
-	Enemy();						//デストラクタ
+	~Enemy();						//デストラクタ
 
 	void Initialize();				//初期化処理
 	void Update();					//更新処理
