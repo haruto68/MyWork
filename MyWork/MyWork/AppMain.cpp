@@ -1,5 +1,5 @@
 #include"DxLib.h"
-#include"SceneManager.h"
+#include"GameMainScene.h"
 
 
 //メイン関数
@@ -8,14 +8,14 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	//例外処理(異常が発生したら、catch文へ)
 	try
 	{
-		//シーンマネージャー機能の生成
-		SceneManager manager;
+		//メイン機能の生成
+		GameMainScene main;
 
-		//シーンマネージャー機能の初期化処理
-		manager.Initialize();
+		//メイン機能の初期化処理
+		main.Initialize();
 
-		//シーンマネージャー機能の更新処理
-		manager.Update();
+		//メイン機能の更新処理
+		main.Update();
 	}
 	catch (const char* err_log)
 	{

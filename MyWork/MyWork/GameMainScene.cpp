@@ -1,21 +1,23 @@
 #include"DxLib.h"
-#include"SceneManager.h"
+#include"GameMainScene.h"
+#include"Player.h"
+#include"Enemy.h"
 #include"InputControl.h"
 
-//コンストラクタ
-SceneManager::SceneManager()
+//
+GameMainScene::GameMainScene() : player(nullptr), enemy(nullptr), back_ground(NULL)
 {
 
 }
 
-//デストラクタ
-SceneManager::~SceneManager()
+//
+GameMainScene::~GameMainScene()
 {
 
 }
 
-//初期化処理
-void SceneManager::Initialize()
+//
+void GameMainScene::Initialize()
 {
 	//ウィンドウのタイトル設定
 	SetMainWindowText("MyWork");
@@ -39,8 +41,8 @@ void SceneManager::Initialize()
 	}
 }
 
-//更新処理
-void SceneManager::Update()
+//
+void GameMainScene::Update()
 {
 	//フレーム開始時間(マイクロ秒)を取得
 	LONGLONG start_time = GetNowHiPerformanceCount();
@@ -57,8 +59,8 @@ void SceneManager::Update()
 			//フレーム開始時間を更新する
 			start_time = now_time;
 
-			//入力機能 : 更新処理
-			InputControl::Update();
+			//入力機能更新処理
+			Update();
 
 			//描画処理
 			Draw();
@@ -67,19 +69,27 @@ void SceneManager::Update()
 		//ESCAPEキーが押されたら、ゲームを終了する
 		if (CheckHitKey(KEY_INPUT_ESCAPE) || InputControl::GetButtonUp(XINPUT_BUTTON_BACK))
 		{
+			DxLib_End();
 			break;
 		}
 	}
 }
 
-//描画処理
-void SceneManager::Draw() const
+//
+void GameMainScene::Draw() const
 {
 	//画面の初期化
 	ClearDrawScreen();
 
 	//描画処理
 
+
 	//裏画面の内容を表画面に反映
 	ScreenFlip();
+}
+
+//
+bool GameMainScene::IsHitCheck(Player* p, Enemy* e)
+{
+	return FALSE;
 }

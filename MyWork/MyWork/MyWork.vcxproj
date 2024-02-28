@@ -133,15 +133,15 @@
   <ItemGroup>
     <ClCompile Include="AppMain.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="GameMainScene.cpp" />
     <ClCompile Include="InputControl.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="SceneManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="GameMainScene.h" />
     <ClInclude Include="InputControl.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Vector2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
