@@ -39,6 +39,12 @@
     <ClCompile Include="InputControl.cpp">
       <Filter>ソース ファイル\Utility</Filter>
     </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>ソース ファイル\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>ソース ファイル\Object</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vector2D.h">
@@ -46,6 +52,12 @@
     </ClInclude>
     <ClInclude Include="InputControl.h">
       <Filter>ソース ファイル\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>ソース ファイル\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>ソース ファイル\Object</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
