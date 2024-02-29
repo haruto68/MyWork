@@ -60,10 +60,11 @@ void GameMainScene::Update()
 			start_time = now_time;
 
 			//入力機能更新処理
-			Update();
+			InputControl::Update();
 
 			//描画処理
 			Draw();
+
 		}
 
 		//ESCAPEキーが押されたら、ゲームを終了する
@@ -79,10 +80,12 @@ void GameMainScene::Update()
 void GameMainScene::Draw() const
 {
 	//画面の初期化
-	ClearDrawScreen();
+	//ClearDrawScreen();
 
 	//描画処理
-
+	player->Draw();
+	enemy->Draw();
+	
 
 	//裏画面の内容を表画面に反映
 	ScreenFlip();
