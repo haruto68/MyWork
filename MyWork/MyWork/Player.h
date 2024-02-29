@@ -12,6 +12,7 @@ private:
 	float acceleration;				//加速度
 	float jumppower;				//ジャンプ加速度
 	bool jump;						//ジャンプ真偽
+	bool hovering;					//ホバリング真偽
 
 	void Move();					//移動処理
 	void Gravity();					//重力処理

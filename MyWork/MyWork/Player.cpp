@@ -3,7 +3,8 @@
 #include"Player.h"
 
 //コンストラクタ
-Player::Player() : location(0.0f), box_size(0.0f), image(NULL), hp(0.0f), acceleration(0.0f), jumppower(0.0f), jump(FALSE)
+Player::Player() : location(0.0f), box_size(0.0f), image(NULL), hp(0.0f), 
+acceleration(0.0f), jumppower(0.0f), jump(FALSE), hovering(FALSE)
 {
 
 }
@@ -70,6 +71,8 @@ void Player::Move()
 	{
 		move.y += jumppower + acceleration;
 	}
+
+	//ホバリング処理
 
 	location += move;
 
