@@ -3,9 +3,9 @@
 #include"Player.h"
 
 //コンストラクタ
-Player::Player() : location(180.0f,240.0f), box_size(0.0f), image(NULL), hp(0.0f)
+Player::Player() : location(0.0f), box_size(0.0f), image(NULL), hp(0.0f)
 {
-	location = (180.0f, 240.0f);
+
 }
 
 //デストラクタ
@@ -17,8 +17,8 @@ Player::~Player()
 //初期化処理
 void Player::Initialize()
 {
-	//location.x = 180.0f;
-	//location.y = 240.0f;
+	location.x = 320.0f;
+	location.y = 240.0f;
 }
 
 //更新処理
@@ -30,7 +30,7 @@ void Player::Update()
 //描画処理
 void Player::Draw()
 {
-	//DrawBoxAA(this->location.x, this->location.y, 300, 300, GetColor(255, 0, 0), TRUE);
+	DrawCircle(location.x, location.y, 30, GetColor(255, 255, 255), TRUE);
 }
 
 //移動処理

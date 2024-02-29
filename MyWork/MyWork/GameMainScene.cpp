@@ -39,6 +39,14 @@ void GameMainScene::Initialize()
 	{
 		throw("描画先の指定ができませんでした\n");
 	}
+
+	//オブジェクトの生成
+	player = new Player;
+	enemy = new Enemy;
+
+	//オブジェクトの初期化
+	player->Initialize();
+	enemy->Initialize();
 }
 
 //
