@@ -1,5 +1,8 @@
 #pragma once
 
+#define MOVE	(5.0)
+#define GRAVITY	(0.98)
+
 //2次元ベクトルクラス
 class Vector2D
 {

@@ -9,8 +9,12 @@ private:
 	Vector2D box_size;				//当たり判定
 	int image;						//画像
 	float hp;						//体力
+	float acceleration;				//加速度
+	float jumppower;				//ジャンプ加速度
+	bool jump;						//ジャンプ真偽
 
 	void Move();					//移動処理
+	void Gravity();					//重力処理
 
 public:
 	Player();						//コンストラクタ

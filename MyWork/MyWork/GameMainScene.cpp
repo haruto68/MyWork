@@ -70,6 +70,10 @@ void GameMainScene::Update()
 			//入力機能更新処理
 			InputControl::Update();
 
+			//オブジェクト更新処理
+			player->Update();
+			enemy->Update();
+
 			//描画処理
 			Draw();
 
@@ -88,12 +92,11 @@ void GameMainScene::Update()
 void GameMainScene::Draw() const
 {
 	//画面の初期化
-	//ClearDrawScreen();
+	ClearDrawScreen();
 
 	//描画処理
 	player->Draw();
 	enemy->Draw();
-	
 
 	//裏画面の内容を表画面に反映
 	ScreenFlip();
